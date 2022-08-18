@@ -1,0 +1,10 @@
+def contactus(request):
+    if request.method == "POST":
+         dsfsdf(sss)
+         #send_mail('Contact Form', "Some message",		 "info@ombc.in",	['shahad_p@yahoo.com'],fail_silently=False)
+         status = "Form submission faileded"
+            
+         data = {"user":request.user.username,
+            	    "subscriber":len(CustomerAccount.objects.filter(username__username=request.user.username,subscriber=True)),
+            	    "status":status,}
+         return render(request, "contactus.html",data)
